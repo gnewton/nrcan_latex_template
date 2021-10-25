@@ -66,10 +66,11 @@ background graphic.
 This is a special frame environment for creating a frame for a single
 graphic from a single image file.
 All content is passed in to the environment using four arguments:
-    1. title
-    2. graphic file, passed to `\includegraphics`
-    3. arguments for `\includegraphics` (usually width, height)
-    4. URL source for graphic
+
+1. Title
+2. Graphic file, passed to `\includegraphics`
+3. Arguments for `\includegraphics` (usually width, height)
+4. URL source for graphic
 
     Here is an example from example.tex
 
