@@ -32,6 +32,7 @@
 }}
 
 \newenvironment{nrcanFrame}{
+ \setbeamertemplate{footline}[frame number]{}    
 \usebackgroundtemplate{%
     \includegraphics[width=\paperwidth,height=\paperheight]{nrcan_content}}
   \begin{frame}
@@ -40,6 +41,7 @@
 }
 
 \newcommand{\nrcanLastFrame}{
+\setbeamertemplate{footline}[frame number]{}
   \usebackgroundtemplate{%
     \includegraphics[width=\paperwidth,height=\paperheight]{nrcan_lastpage}
   }
@@ -59,8 +61,15 @@
   % 4 url source
   \def\Filename{#2} % From https://tex.stackexchange.com/questions/474504/using-optional-argument-in-closing-statement-of-new-environment
   \usebackgroundtemplate{}
-  \setbeamertemplate{footline}{\centering{\hspace{2mm}\tiny Source: \url{#4}}}
+    \setbeamertemplate{footline}{\centering{\hspace{2mm}\tiny Source: \url{#4}}
+\hfill%
+  \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{page number in head/foot}%
+  \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+}
+
   \begin{frame}
+   
     \frametitle{#1}
     \centering
         \includegraphics[#3]{#2}

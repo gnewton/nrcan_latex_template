@@ -119,4 +119,4 @@ the public domain.
 1. French version derived from french PowerPoint template
 2. Make into a proper Beamer style
 3. Move page numbers to upper right hand corner
-4. Add page numbers to `nrcanGraphicFrame`
+4. ~~Add page numbers to `nrcanGraphicFrame`~~
