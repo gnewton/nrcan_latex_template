@@ -10,10 +10,10 @@ It uses background images extracted from the NRCan PowerPoint deck.
 
 You need the following files for this template to work:
 
-1. 'nrcan_template_base.tex`
-2. 'nrcan_content.jpg'
-3. 'nrcan_lastpage.jpg'
-4. 'nrcan_title.jpg'
+1. `nrcan_template_base.tex`
+2. `nrcan_content.jpg`
+3. `nrcan_lastpage.jpg`
+4. `nrcan_title.jpg`
 
 # How to use
 Add the following after your `\documentclass` line in your LaTeX file:
