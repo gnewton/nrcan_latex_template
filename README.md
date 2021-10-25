@@ -4,6 +4,17 @@ This is a [LaTeX](https://www.latex-project.org/) [Beamer](https://ctan.org/pkg/
 using LaTeX.
 It uses background images extracted from the NRCan PowerPoint deck.
 
+
+
+# Files
+
+You need the following files for this template to work:
+
+1. 'nrcan_template_base.tex`
+2. 'nrcan_content.jpg'
+3. 'nrcan_lastpage.jpg'
+4. 'nrcan_title.jpg'
+
 # How to use
 Add the following after your `\documentclass` line in your LaTeX file:
 ```tex
