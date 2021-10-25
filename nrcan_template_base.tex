@@ -39,7 +39,7 @@
   \end{frame}
 }
 
-\newenvironment{nrcanLastFrame}{
+\newcommand{\nrcanLastFrame}{
   \usebackgroundtemplate{%
     \includegraphics[width=\paperwidth,height=\paperheight]{nrcan_lastpage}
   }
@@ -48,12 +48,11 @@
       \node at (0,0) {};
       \node[scale=.7] at (9cm,-7.5cm) {\tiny Made with: \url{https://github.com/gnewton/nrcan_latex_template}};
     \end{tikzpicture}
-}{
   \end{frame}
 }
 
 %%%%
-\newenvironment{nrcanGraphicFrame}[4]{
+\newcommand{\nrcanGraphicFrame}[4]{
   % 1 title
   % 2 graphic
   % 3 width/height
@@ -65,8 +64,6 @@
     \frametitle{#1}
     \centering
         \includegraphics[#3]{#2}
-}
-{
   \end{frame}
 }
 %%%%
