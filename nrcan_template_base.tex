@@ -1,0 +1,91 @@
+
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{calc}
+
+\hypersetup{
+  urlcolor=gray,
+  colorlinks=true
+  }
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\setbeamercolor{itemize item}{fg=blue}
+\setbeamercolor{itemize subitem}{fg=blue}
+\setbeamercolor{enumerate item}{fg=blue}
+\setbeamercolor{enumerate subitem}{fg=blue}
+
+\setbeamercolor{title}{fg=black,bg=gray!50!white}
+\setbeamercolor*{subtitle}{fg=white}
+\setbeamercolor*{date}{fg=gray,bg=black}
+\setbeamercolor{author}{fg=gray,bg=black}
+\setbeamercolor{institute}{fg=gray,bg=black}
+
+\newcommand{\nrcanTitleframe}{
+{\usebackgroundtemplate{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{nrcan_title}
+  }
+  \begin{frame}[plain]
+  \titlepage
+\end{frame}
+}}
+
+\newenvironment{nrcanFrame}{
+\usebackgroundtemplate{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{nrcan_content}}
+  \begin{frame}
+}{
+  \end{frame}
+}
+
+\newenvironment{nrcanLastFrame}{
+  \usebackgroundtemplate{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{nrcan_lastpage}
+  }
+  \begin{frame}
+    \begin{tikzpicture}
+      \node at (0,0) {};
+      \node[scale=.7] at (9cm,-7.5cm) {\tiny Made with: \url{https://github.com/gnewton/nrcan_latex_template}};
+    \end{tikzpicture}
+}{
+  \end{frame}
+}
+
+%%%%
+\newenvironment{nrcanGraphicFrame}[4]{
+  % 1 title
+  % 2 graphic
+  % 3 width/height
+  % 4 url source
+  \def\Filename{#2} % From https://tex.stackexchange.com/questions/474504/using-optional-argument-in-closing-statement-of-new-environment
+  \usebackgroundtemplate{}
+  \setbeamertemplate{footline}{\centering{\hspace{2mm}\tiny Source: \url{#4}}}
+  \begin{frame}
+    \frametitle{#1}
+    \centering
+        \includegraphics[#3]{#2}
+}
+{
+  \end{frame}
+}
+%%%%
+% Change the templace for the title page     
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \begin{tikzpicture}
+    \node[rounded corners,align=center,inner sep=5mm,text width=13cm,text=black,fill=gray!50!white,opacity=.8, text opacity=1] at (0,0)
+         {%
+           {\huge \inserttitle} \\
+           {\Large \insertsubtitle} \ \\
+           \ \\
+               {\Large \insertauthor}\\
+               \ \\
+                   {\small \insertinstitute}
+                   \ \\
+      \ \\
+      \insertdate};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%

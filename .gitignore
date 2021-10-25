@@ -194,6 +194,8 @@ sympy-plots-for-*.tex/
 *.upa
 *.upb
 
+*.html
+
 # pythontex
 *.pytxcode
 pythontex-files-*/
@@ -274,3 +276,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# emacs
+*~

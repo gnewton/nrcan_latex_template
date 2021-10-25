@@ -1,0 +1,78 @@
+% Copyright 2021 Glen Newton
+% License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+
+\documentclass[11pt,aspectratio=169]{beamer}
+
+\input{nrcan_template_base}
+
+\title{This is the title}
+\author{Author here}
+\institute 
+{
+  Title\\
+  Division/Sector\\
+  Natural Resources Canada
+}
+\date{Venue\\
+     \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%% Title page
+\nrcanTitleframe
+
+  
+%% Normal content page
+\begin{nrcanFrame}
+  \frametitle{Introduction}
+  \begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+  \end{itemize}
+\end{nrcanFrame}
+
+%% Normal content page
+\begin{nrcanFrame}
+  \frametitle{Second content page}
+  \begin{itemize}
+  \item Lorem
+  \item Ipsem
+  \item more
+  \end{itemize}
+\end{nrcanFrame}
+
+
+%% Graphic Frame:
+%%   arg0=title
+%%   arg1=graphic file
+%%   arg2=arguments for includegraphics (usually width, height)
+%%   arg3=URL source for graphic
+\begin{nrcanGraphicFrame}
+  {Wikipedia - map of Canada}
+  {680px-Map_Canada_political-geo}
+  {height=\paperheight/5*4}
+  {https://en.wikipedia.org/wiki/File:Map_Canada_political-geo.png}
+\end{nrcanGraphicFrame}
+
+
+\begin{nrcanFrame}
+  \frametitle{Another page}
+  \begin{itemize}
+  \item More content
+  \end{itemize}
+\end{nrcanFrame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Last page (Canada word mark)
+\begin{nrcanLastFrame}
+
+\end{nrcanLastFrame}
+
+
+
+\end{document}
